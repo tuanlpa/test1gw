@@ -93,3 +93,20 @@
           }
         });
       });
+
+// Khởi tạo slider chính và slider hình thu nhỏ khi deploy
+$(document).ready(function(){
+  $('#main-slider').slick({
+    slidesToShow: 1,
+    arrows: true,
+    asNavFor: '#thumb-slider-inner',
+    vertical: true
+  });
+
+  $('#thumb-slider-inner').slick({
+    slidesToShow: 4,
+    asNavFor: '#main-slider',
+    focusOnSelect: true,
+    vertical: true
+  });
+});
