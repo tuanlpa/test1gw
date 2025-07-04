@@ -1,0 +1,100 @@
+[
+  
+  {
+  "title": "Thạch Darae",
+  "url": "../products/thachdarae.html",
+  "category": "thucpham",
+  "gallery": [
+    "../images/products/thachDarae/thachDarae1.jpg",
+    "../images/products/thachDarae/thachDarae2.jpg",
+    "../images/products/thachDarae/thachDarae3.jpg",
+    "../images/products/thachDarae/thachDarae4.jpg",
+    "../images/products/thachDarae/thachDarae5.jpg",
+    "../images/products/thachDarae/thachDarae6.jpg",
+    "../images/products/thachDarae/thachDarae7.jpg",
+    "../images/products/thachDarae/thachDarae8.jpg",
+    "../images/products/thachDarae/thachDarae9.jpg",
+    "../images/products/thachDarae/thachDarae10.jpg"
+  ],
+  "price": "Thương lượng",
+  "moq": "Thương lượng",
+  "supplier": "Sandeulbaram",
+  "manufacturerLink": "https://gwdmall.kr/goods/view?no=103413",
+  "keywords": ["thạch", "Darae", "sandeulbaram", "kiwi", "snack", "thực phẩm"]
+  },
+
+  {
+    "title": "Nước ép Darae",
+    "url": "../products/nuocdarae.html",
+    "category": "thucpham",
+    "gallery": [
+      "../images/products/nuocdarae/nuocdarae1.jpg",
+      "../images/products/nuocdarae/nuocdarae2.jpg",
+      "../images/products/nuocdarae/nuocdarae3.jpg",
+      "../images/products/nuocdarae/nuocdarae4.jpg",
+      "../images/products/nuocdarae/nuocdarae5.jpg",
+      "../images/products/nuocdarae/nuocdarae6.jpg",
+      "../images/products/nuocdarae/nuocdarae7.jpg",
+      "../images/products/nuocdarae/nuocdarae8.jpg",
+      "../images/products/nuocdarae/nuocdarae9.jpg",
+      "../images/products/nuocdarae/nuocdarae10.jpg"
+    ],
+    "price": "Thương lượng",
+    "moq": "Thương lượng",
+    "supplier": "Sandeulbaram",
+    "manufacturerLink": "https://gwdmall.kr/goods/view?no=103403",
+    "keywords": ["juice", "kiwi", "Darae", "sandeulbaram", "thực phẩm", "nước ép"]
+  },
+
+  {
+    "title": "Nước tăng lực Wonsente",
+    "url": "../products/wonsente.html",
+    "category": "thucpham",
+    "gallery": [
+      "../images/products/wonsente/wonsente1.jpg",
+      "../images/products/wonsente/wonsente2.jpg",
+      "../images/products/wonsente/wonsente3.jpg",
+      "../images/products/wonsente/wonsente4.jpg",
+      "../images/products/wonsente/wonsente5.jpg",
+      "../images/products/wonsente/wonsente6.jpg",
+      "../images/products/wonsente/wonsente7.jpg",
+      "../images/products/wonsente/wonsente8.jpg",
+      "../images/products/wonsente/wonsente9.jpg",
+      "../images/products/wonsente/wonsente10.jpg"
+    ],
+    "price": "Thương lượng",
+    "moq": "Thương lượng",
+    "supplier": "Sandeulbaram",
+    "manufacturerLink": "https://gwdmall.kr/goods/view?no=108758",
+    "keywords": ["nước tăng lực", "kiwi", "Darae", "sandeulbaram", "thực phẩm", "energy drink"]
+  },
+
+  {
+  "title": "Thanh lăn dưỡng ẩm Lynkly",
+  "url": "../products/lynkly.html",
+  "category": "mypham",
+  "gallery": [
+    "../images/products/lynkly/lynkly1.jpg",
+    "../images/products/lynkly/lynkly2.jpg",
+    "../images/products/lynkly/lynkly3.jpg",
+    "../images/products/lynkly/lynkly4.jpg",
+    "../images/products/lynkly/lynkly5.jpg",
+    "../images/products/lynkly/lynkly6.jpg",
+    "../images/products/lynkly/lynkly7.jpg",
+    "../images/products/lynkly/lynkly8.jpg",
+    "../images/products/lynkly/lynkly9.jpg",
+    "../images/products/lynkly/lynkly10.jpg",
+    "../images/products/lynkly/lynkly11.jpg",
+    "../images/products/lynkly/lynkly12.jpg",
+    "../images/products/lynkly/lynkly13.jpg",
+    "../images/products/lynkly/lynkly14.jpg"
+  ],
+  "price": "$7 - Thương lượng",
+  "moq": "100 - Thương lượng",
+  "supplier": "Lynkly",
+  "manufacturerLink": "https://dfhkorea.cafe24.com/product/링클리-하이드로겔스틱-단품5/11",
+  "keywords": ["dưỡng ẩm", "thanh lăn", "skincare", "lynkly", "stick", "peptide", "vitamin E", "hydrogel", "làm đẹp", "mỹ phẩm"]
+}
+
+
+]

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Gangwon - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Gangwon</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -26,6 +26,47 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+
+  <!-- Floating contact buttons -->
+  <div class="floating-contact-buttons">
+    <!-- Gọi điện -->
+    <a href="tel:02873053224" class="contact-btn" title="Gọi ngay: 028 7305 3224">
+      <span class="icon icon-phone"></span>
+    </a>
+
+    <!-- Gửi đến ptgangwon@gmail.com và CC cho ysh3908@korea.kr -->
+    <a href="mailto:ptgangwon@gmail.com?cc=ysh3908@korea.kr" class="contact-btn" title="Gửi email đến: ptgangwon@gmail.com (CC: ysh3908@korea.kr)">
+      <span class="icon icon-envelope"></span>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/gangwonvietnam" target="_blank" class="contact-btn" title="Truy cập Facebook Gangwon Vietnam">
+      <span class="icon icon-facebook"></span>
+    </a>
+
+    <!-- Lên đầu trang -->
+    <a href="javascript:void(0)" id="btn-to-top" class="contact-btn" title="Lên đầu trang">
+      <span class="icon icon-arrow-up"></span>
+    </a>
+  </div>
+
+  <script>
+    const toTopBtn = document.getElementById("btn-to-top");
+
+    toTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", function () {
+      toTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+    });
+
+    // Mặc định ẩn nút "lên đầu trang"
+    toTopBtn.style.display = "none";
+  </script>
+
+
+
   <body>
     
     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
@@ -35,16 +76,16 @@
           <div class="col-md-8 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
           	<div class="icon">
           		<a href="index.html" class="logo">
-          			<img src="images/logo-gangwon.png" alt="Gangwon Logo" style="height: 50px;">
+          			<img src="images/logo-gangwon.png" alt="Gangwon Logo" style="max-height: 20vh; width: auto;">
           			<h1>Gangwon</h1>
           		</a>
           	</div>
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">VPĐD tại Việt Nam</h1>
-            <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Gangwon State Vietnam Headquarter <a href="#">state.gwd.go.kr</a></p>
+            <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Gangwon State Vietnam Headquarter <a href="https://state.gwd.go.kr">state.gwd.go.kr</a></p>
 
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="https://www.facebook.com/gangwonvietnam" class="btn btn-white btn-outline-white px-4 py-3">Sản phẩm xúc tiến thương mại</a></p>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="search.html?q=" class="btn btn-white btn-outline-white px-4 py-3">Tát cả sản phẩm xúc tiến thương mại</a></p>
           </div>
-        </div>
+
       </div>
     </div>
 
@@ -55,13 +96,35 @@
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
+		  <form class="search-box position-relative d-flex align-items-center ml-3" action="search.html" method="get">
+  		  <!-- Icon kính lúp -->
+  		  <span class="icon-search" style="
+  		    position: absolute;
+   		   left: 15px;
+   		   color: #aaa;
+   		   font-size: 16px;
+ 		   ">
+  		  </span>
+
+  		  <!-- Ô tìm kiếm -->
+  		  <input
+   		   type="search"
+    		  name="q"
+    		  placeholder="Tìm sản phẩm..."
+   		   class="btn btn-white btn-outline-white px-4 py-2 pl-5"
+   		   style="border-radius: 25px; border: 1px solid #ccc; background: #fff; color: #000; max-width: 250px;"
+  		  >
+		  </form>
+
+
+
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Trang chủ</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">Về chúng tôi</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Mỹ phẩm</a></li>
-	          <li class="nav-item"><a href="work.html" class="nav-link">Thực phẩm chức năng</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Thực phẩm</a></li>
+	          <li class="nav-item"><a href="categories/mypham.html" class="nav-link">Mỹ phẩm</a></li>
+	          <li class="nav-item"><a href="categories/mevabe.html" class="nav-link">Mẹ & bé</a></li>
+	          <li class="nav-item"><a href="categories/thucpham.html" class="nav-link">Thực phẩm</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
 	        </ul>
 	      </div>
@@ -69,39 +132,56 @@
 	  </nav>
     <!-- END nav -->
 
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row">
+    <section class="ftco-section"> 
+      <div class="container">
+        <div class="row">
+      
           <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon mb-3 text-center"><img src="images/beauty-icon.png" alt="Làm đẹp" width="50"></div>
-              <div class="media-body">
-                <h3 class="heading">Làm đẹp (Beauty)</h3>
-                <p>Gangwon là vùng đất nổi tiếng với thiên nhiên tinh khiết, nơi hội tụ các thương hiệu mỹ phẩm sạch, thuần khiết và thân thiện với môi trường.</p>
+            <a href="categories/mypham.html" class="text-decoration-none">
+              <div class="media d-block text-center block-6 services">
+                <div class="icon mb-3 text-center">
+                  <img src="images/beauty-icon.png" alt="Làm đẹp" width="50">
+                </div>
+                <div class="media-body">
+                  <h3 class="heading">Mỹ phẩm và làm đẹp (Beauty)</h3>
+                  <p>Gangwon là vùng đất nổi tiếng với thiên nhiên tinh khiết, nơi hội tụ các thương hiệu mỹ phẩm sạch, thuần khiết và thân thiện với môi trường.</p>
+                </div>
               </div>
-            </div>      
+            </a>
           </div>
+
           <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon mb-3 text-center"><img src="images/food-icon.png" alt="Thực phẩm và Đồ uống" width="50"></div>
-              <div class="media-body">
-                <h3 class="heading">Thực phẩm và Đồ uống</h3>
-                <p>Tỉnh Gangwon nổi tiếng với các sản phẩm nông sản sạch, vùng núi cao, mang hương vị đặc trưng của Hàn Quốc như khoai trái Darae, Omija, rau Gondre và các loại ngũ cốc hữu cơ.</p>
+            <a href="categories/mevabe.html" class="text-decoration-none">
+              <div class="media d-block text-center block-6 services">
+                <div class="icon mb-3 text-center">
+                  <img src="images/baby-icon.png" alt="Mẹ & bé" width="50">
+                </div>
+                <div class="media-body">
+                  <h3 class="heading">Mẹ & bé</h3>
+                  <p>Người Hàn Quốc nổi tiếng với lối sống khoa học và ý thức chăm sóc trẻ nhỏ một cách tự nhiên, an toàn. Đó là lý do các sản phẩm mẹ và bé từ tỉnh Gangwon được các gia đình tại Hàn Quốc và toàn châu Á tin dùng.</p>
+                </div>
               </div>
-            </div>      
+            </a>
           </div>
+
           <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon mb-3 text-center"><img src="images/supplement-icon.png" alt="Thực phẩm chức năng" width="50"></div>
-              <div class="media-body">
-                <h3 class="heading">Thực phẩm chức năng</h3>
-                <p>Dân số Hàn Quốc sống lâu và khoẻ mạnh nhờ ý thức chăm sóc sức khoẻ từ sớm, đó là lý do các sản phẩm thực phẩm chức năng của Gangwon được tin dùng trên toàn châu Á.</p>
+            <a href="categories/thucpham.html" class="text-decoration-none">
+              <div class="media d-block text-center block-6 services">
+                <div class="icon mb-3 text-center">
+                  <img src="images/food-icon.png" alt="Thực phẩm và Đồ uống" width="50">
+                </div>
+                <div class="media-body">
+                  <h3 class="heading">Thực phẩm và Đồ uống</h3>
+                  <p>Tỉnh Gangwon nổi tiếng với các sản phẩm nông sản sạch, vùng núi cao, mang hương vị đặc trưng của Hàn Quốc như khoai trái Darae, Omija, rau Gondre và các loại ngũ cốc hữu cơ.</p>
+                </div>
               </div>
-            </div>    
+            </a>
           </div>
+
         </div>
-    	</div>
+      </div>
     </section>
+
 
     <section class="ftco-section bg-light">
       <div class="container">
@@ -164,76 +244,94 @@
       </div>
     </section>
 
-		<section class="ftco-section ftco-discount img" style="background-image: url(images/bg_2.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row justify-content-end">
-					<div class="col-md-5 discount ftco-animate">
-						<h3>Dành cho đối tác liên hệ sớm</h3>
-						<h2 class="mb-4">Ưu đãi cho doanh nghiệp Việt Nam</h2>
-						<p class="mb-4">- Cung cấp mẫu thử để khảo sát phản ứng người tiêu dùng : khoảng 10 đến 50 mẫu. </p>
-						<p class="mb-4">- Hỗ trợ làm giấy phép nhập khẩu và thủ tục pháp lý (áp dụng cho sản phẩm thực phẩm và mỹ phẩm) </p>
-						<p class="mb-4">- Hỗ trợ thương lượng giá FOB tối thiểu, số lượng đặt hàng (MOQ) tối thiểu và khối lượng sản phẩm khi nhập hàng. </p>
-						<p class="mb-4">- Khi bắt đầu bán sản phẩm nhập khẩu, sẽ được hỗ trợ 1 lần làm video quàng bá và đăng trên kênh truyền thông trực tuyến </p>
-						<p class="mb-4">- Hỗ trợ sang Hàn Quốc để thăm nhà máy và làm việc (Trường hợp xác nhận nhập khẩu sản phẩm của tỉnh trước đầu tháng 8 năm 2025): </p>
-						<p class="mb-4">+ Hỗ trợ bao gồm vé máy bay, chi phí khách sạn, phương tiện di chuyển và thủ tục xin visa. Tuy nhiên, việc lựa chọn hỗ trợ sẽ dựa trên số lượng hàng nhập khẩu dự kiến.</p>
-						<p><a href="#" class="btn btn-white btn-outline-white px-4 py-3">Liên hệ ngay</a></p>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="ftco-section ftco-discount img" style="background-image: url(images/bg_2.jpg); position: relative;">
+      <div class="overlay" style="background: rgba(0, 0, 0, 0.4); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+
+      <div class="container position-relative" style="z-index: 2;">
+        <div class="row justify-content-center">
+          <div class="col-md-10 ftco-animate">
+            <div style="
+              background: white;
+              border-radius: 16px;
+              padding: 50px;
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+              color: black;
+            ">
+                 <h2 class="mb-3 text-primary">Ưu đãi đặc biệt cho doanh nghiệp Việt Nam</h2>
+                 <ul class="list-unstyled">
+                   <li class="mb-3">• Cung cấp <strong>10 – 50 mẫu thử</strong> để khảo sát thị trường</li>
+                   <li class="mb-3">• Hỗ trợ <strong>giấy phép nhập khẩu</strong> và thủ tục pháp lý (thực phẩm & mỹ phẩm)</li>
+                   <li class="mb-3">• Thương lượng giá FOB, MOQ và khối lượng nhập tối ưu</li>
+                   <li class="mb-3">• Tặng <strong>01 video quảng bá</strong> khi bắt đầu phân phối</li>
+                   <li class="mb-3">• <strong>Hỗ trợ sang Hàn Quốc</strong> tham quan nhà máy:
+                     <ul>
+                       <li>– Vé máy bay khứ hồi</li>
+                       <li>– Khách sạn, di chuyển & visa</li>
+                       <li><em>* Áp dụng cho đối tác xác nhận đơn hàng trước tháng 8/2025</em></li>
+                     </ul>
+	    		   </li>    
+              <p><a href="mailto:ptgangwon@gmail.com?cc=ysh3908@korea.kr" class="btn btn-dark px-4 py-3">Liên hệ ngay</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-3">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h2 class="mb-4">Sản phẩm đang xúc tiến thương mại</h2>
-            <p>Các sản phẩm thực phẩm, đồ uống, thực phẩm chức năng, chăm sóc sức khỏe và sắc đẹp có nguồn gốc tự nhiên từ tỉnh Gangwon (Hàn Quốc).</p>
+            <p>Các sản phẩm thực phẩm, đồ uống, Mẹ & bé, chăm sóc sức khỏe và sắc đẹp có nguồn gốc tự nhiên từ tỉnh Gangwon (Hàn Quốc).</p>
           </div>
         </div>
         <div class="row">
-        	<div class="col-md-4 ftco-animate">
-        		<a href="#" class="work-entry">
-        			<img src="images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
-        			<div class="info d-flex align-items-center">
-        				<div>
-        					<div class="icon mb-4 d-flex align-items-center justify-content-center">
-        						<span class="icon-search"></span>
-        					</div>
-		        			<h3>Nước ép Darae</h3>
-	        			</div>
-        			</div>
-        		</a>
-        	</div>
-        	<div class="col-md-4 ftco-animate">
-        		<a href="#" class="work-entry">
-        			<img src="images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
-        			<div class="info d-flex align-items-center">
-        				<div>
-        					<div class="icon mb-4 d-flex align-items-center justify-content-center">
-        						<span class="icon-search"></span>
-        					</div>
-		        			<h3>Phô mai khô Danme Food</h3>
-	        			</div>
-        			</div>
-        		</a>
-        	</div>
-        	<div class="col-md-4 ftco-animate">
-        		<a href="#" class="work-entry">
-        			<img src="images/work-3.jpg" class="img-fluid" alt="Colorlib Template">
-        			<div class="info d-flex align-items-center">
-        				<div>
-        					<div class="icon mb-4 d-flex align-items-center justify-content-center">
-        						<span class="icon-search"></span>
-        					</div>
-		        			<h3>Viên súc miệng Tiger Gargle</h3>
-	        			</div>
-        			</div>
-        		</a>
-        	</div>
+          <div class="col-md-4 ftco-animate">
+            <a href="products/nuocdarae.html" class="work-entry">
+              <img src="images/products/nuocdarae/nuocdarae2.jpg" class="img-fluid" alt="Nước ép Darae">
+              <div class="info d-flex align-items-center">
+                <div>
+                  <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                    <span class="icon-search"></span>
+                  </div>
+                  <h3>Nước ép Darae</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 ftco-animate">
+            <a href="products/wonsente.html" class="work-entry">
+              <img src="images/products/wonsente/wonsente4.jpg" class="img-fluid" alt="Nước tăng lực Wonsente">
+              <div class="info d-flex align-items-center">
+                <div>
+                  <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                    <span class="icon-search"></span>
+                  </div>
+                  <h3>Nước tăng lực Wonsente</h3>
+               </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 ftco-animate">
+            <a href="products/lynkly.html" class="work-entry">
+              <img src="images/products/lynkly/indexcover.jpg" class="img-fluid" alt="Thanh lăn dưỡng ẩm Lynkly" >
+              <div class="info d-flex align-items-center">
+                <div>
+                  <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                    <span class="icon-search"></span>
+                  </div>
+                  <h3>Thanh lăn dưỡng ẩm Lynkly</h3>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-    	</div>
+      </div>
     </section>
+
 
     <section class="ftco-partner bg-light">
     	<div class="container">
@@ -241,22 +339,22 @@
     			<div class="col-md-10">
     				<div class="row">
 		        	<div class="col-md-3 ftco-animate">
-		        		<a href="#" class="partner-entry">
+		        		<a href="https://danmeefood.com" class="partner-entry">
 		        			<img src="images/partner-1.jpg" class="img-fluid" alt="Colorlib template">
 		        		</a>
 		        	</div>
 		        	<div class="col-md-3 ftco-animate">
-		        		<a href="#" class="partner-entry">
+		        		<a href="http://donghwafood.co.kr" class="partner-entry">
 		        			<img src="images/partner-2.jpg" class="img-fluid" alt="Colorlib template">
 		        		</a>
 		        	</div>
 		        	<div class="col-md-3 ftco-animate">
-		        		<a href="#" class="partner-entry">
+		        		<a href="https://shebahbio.com" class="partner-entry">
 		        			<img src="images/partner-3.jpg" class="img-fluid" alt="Colorlib template">
 		        		</a>
 		        	</div>
 		        	<div class="col-md-3 ftco-animate">
-		        		<a href="#" class="partner-entry">
+		        		<a href="http://www.shinsunglab.co.kr" class="partner-entry">
 		        			<img src="images/partner-4.jpg" class="img-fluid" alt="Colorlib template">
 		        		</a>
 		        	</div>
@@ -268,7 +366,7 @@
 
 		
 
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
+	<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
 			<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
@@ -316,64 +414,6 @@
       </div>
     </section>
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Sản Phẩm</h2>
-            <p>Sản phẩm thực phẩm, thực phẩm chức năng và mỹ phẩm từ tỉnh Gangwon Hàn Quốc.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text py-4 d-block">
-              	<div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="#">Thạch Darae</a></h3>
-                <p>Làm từ trái Darae, với hương vị ngọt đặc trưng thơm ngon</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text py-4 d-block">
-              	<div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="#">Skin Care for Teen Skin</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text py-4 d-block">
-              	<div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="#">Skin Care for Teen Skin</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
 		
 		<section class="ftco-section ftco-appointment">
 			<div class="overlay"></div>
@@ -388,7 +428,7 @@
 	    				</div>
 	    				<div class="mb-4">
 		    				<h3 class="mb-3">Điện thoại</h3>
-		    				<p class="day"><strong>(028) 7305 7224</strong> hoặc <strong>093 849 3067</strong></p>
+		    				<p class="day"><strong>(028) 7305 7224</strong> hoặc line tiếng Hàn 한국인: <strong>093 849 3067</strong></p>
 	    				</div>
 	    				<div>
 		    				<h3 class="mb-3">Giờ làm việc</h3>
@@ -432,87 +472,75 @@
     </section>
 
     <footer class="ftco-footer ftco-section img">
-    	<div class="overlay"></div>
+      <div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-3">
+          <!-- Về chúng tôi -->
+          <div class="col-md-6">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Về chúng tôi</h2>
-              <p>VPĐD tỉnh Gangwon tại Việt Nam hoạt động với sứ mệnh chính là kết nối và phát triển giao thương giữa doanh nghiệp Việt Nam và các nhà sản xuất thuộc tỉnh Gangwon, Hàn Quốc.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <p>VPĐD Tỉnh Gangwon tại Việt Nam là đơn vị xúc tiến thương mại phi lợi nhuận, trực thuộc chính quyền tỉnh Gangwon (Hàn Quốc). Chúng tôi kết nối doanh nghiệp Hàn – Việt trực tiếp, không qua trung gian, hướng đến hợp tác lâu dài và bền vững.</p>
+              <ul class="ftco-footer-social list-unstyled mt-5">
                 <li class="ftco-animate">
                   <a href="https://www.facebook.com/gangwonvietnam" target="_blank" rel="noopener">
                     <span class="icon-facebook"></span>
                   </a>
                 </li>
                 <li class="ftco-animate">
-  					<a href="https://www.instagram.com/gangwonvietnam/" target="_blank" rel="noopener">
-    					<span class="icon-instagram"></span>
-  					</a>
-				</li>
+                 <a href="https://www.instagram.com/gangwonvietnam/" target="_blank" rel="noopener">
+                    <span class="icon-instagram"></span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Sự kiện gần đây</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Nội dung</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Ưu đãi cho doanh nghiệp</a></li>
-                <li><a href="#" class="py-2 d-block">Kinh nghiệm</a></li>
-                <li><a href="#" class="py-2 d-block">Đối tác chiến lược</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Liên hệ</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">14.01, Cobi Tower 1, 69 Hoàng Văn Thái, Khu đô thị Phú Mỹ Hưng, Quận 7, Hồ Chí Minh, Việt Nam</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">(028) 7305 3224</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">ysh3908@korea.kr</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Mọi vấn đề bản quyền thuộc VPĐD Gangwon &copy;<script>document.write(new Date().getFullYear());</script> 
+          <!-- Liên hệ -->
+          <div class="col-md-6">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Liên hệ</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li>
+                    <a href="contact.html#map-section">
+                      <span class="icon icon-map-marker"></span>
+                      <span class="text">14.01, Cobi Tower 1, 69 Hoàng Văn Thái, Khu đô thị Phú Mỹ Hưng, Quận 7, Hồ Chí Minh, Việt Nam</span>
+                    </a>
+                  </li>
+                  <!-- Điện thoại -->
+                  <li>
+                    <div class="d-flex align-items-center">
+                      <a href="tel:02873053224" class="d-flex align-items-center mr-4">
+                       <span class="icon icon-phone mr-2"></span>
+                        <span class="text">(028) 7305 3224</span>
+                      </a>
+                      <a href="tel:0938493067" class="d-flex align-items-center">
+                        <span class="text">093 849 3067 (Tiếng Hàn)</span>
+                      </a>
+                    </div>
+                  </li>
+
+                  <!-- Email -->
+                  <li>
+                    <div class="d-flex align-items-center">
+                      <a href="mailto:ptgangwon@gmail.com" class="d-flex align-items-center mr-4">
+                        <span class="icon icon-envelope mr-2"></span>
+                        <span class="text">ptgangwon@gmail.com</span>
+                      </a>
+                      <a href="mailto:ysh3908@korea.kr" class="d-flex align-items-center">
+                        <span class="text">ysh3908@korea.kr (Tiếng Hàn)</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
+
+
       </div>
     </footer>
+
     
   
 

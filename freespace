@@ -1,0 +1,7 @@
+CSS trang sản phẩm: .../css/product.css
+js trang sản phẩm: .../js/product.js
+thachdarae.html
+thông tin nhà sản xuất tự fetch lẻ trong từng file sản phẩm
+ưu đãi cho doanh nghiệp tự fetch trong trang sản phẩm từ ../supplier/uudaichodoanhnghiep.html 
+hình ảnh sản phẩm chính trong gallery, title, giá tự fetch từ file products.json thông qua .../js/productsync.js nhưng cần đúng đường dẫn trong trang sản phẩm, ví dụ: thachdarae.html`
+kết quả search phụ thuộc vào trường keyword trong file products.json, ví dụ: thachdarae.html sẽ tìm kiếm từ khóa "thạch" trong file products.json
